@@ -1,3 +1,37 @@
+.main {
+    background-color: whitesmoke;
+    height: 100vh;
+}
 .main > h1 {
     text-align: center;
+
+}
+
+.books {
+    display: flex;
+    width: 70vw;
+    margin-inline: auto;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.book {
+    flex-basis: 300px;
+    background-color: white;
+    border-radius: 9px;
+    padding: 10px;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.bold {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(32, 31, 31);
 }
