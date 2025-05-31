@@ -11,13 +11,17 @@
 <body>
     <div class="main">
         <h1>My library</h1>
+        <button class="add-book">New Book</button>
+        <dialog>
+            <form method="post">
+                <input id="title" name="title" type="text" placeholder="title" required>
+                <input id="author" name="author" type="text" placeholder="author" required>
+                <input id="pages" name="pages" type="number" placeholder="pages" required>
+                <label for="read"><input type="checkbox" name="read" id="read">Have you read it!</label>
+                <button type="submit">Add Book</button>
+            </form>
+        </dialog>
         <div class="books">
-            <article class="book">
-                <p class="title">title</p>
-                <p><span class="bold">author : </span> author</p>
-                <p><span class="bold" >page : </span> page</p>
-                <p><span class="bold" >read : </span> ✅</p>
-            </article>
         </div>
     </div>
 </body>

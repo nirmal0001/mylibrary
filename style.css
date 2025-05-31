@@ -7,6 +7,98 @@
 
 }
 
+/* button and form */
+.add-book {
+    display: block;
+    margin-inline: auto;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(48, 34, 34);
+    font-weight: 600;
+}
+
+.add-book:active {
+    background-color: rgb(132, 223, 132);
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+dialog {
+    margin-inline: auto;
+    margin-top: 10vh;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    max-width: 400px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+dialog form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+dialog input[type="text"],
+dialog input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+dialog input:valid {
+    outline: 2px solid lightgreen;
+}
+dialog input:invalid:focus {
+    outline: 2px solid red;
+}
+dialog input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+dialog label {
+    font-size: 0.95rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+dialog button[type="submit"] {
+    background-color: lightgreen;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: rgb(48, 34, 34);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+dialog button[type="submit"]:hover {
+    background-color: rgb(132, 223, 132);
+}
+
+dialog button[type="submit"]:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* main */
 .books {
     display: flex;
     width: 70vw;
@@ -14,13 +106,27 @@
     padding-top: 15px;
     flex-wrap: wrap;
     flex: 1;
+    gap: 20px;
+    justify-content: center;
 }
 
+/* books */
 .book {
-    flex-basis: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 250px;
     background-color: white;
     border-radius: 9px;
     padding: 10px;
+    gap: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .title {
@@ -34,4 +140,36 @@
     font-weight: 400;
     font-style: normal;
     color: rgb(32, 31, 31);
+}
+
+
+.delete, .read {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+.delete{
+    background-color: rgb(165, 55, 55);
+}
+.delete:hover {
+    background-color: rgb(197, 33, 33);
+}
+
+.delete:active {
+    background-color: red;
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read {
+    background-color: lightgreen;
+}
+.read:hover {
+    background-color: rgb(134, 238, 134);
+}
+
+.read:active {
+    background-color: rgb(99, 226, 99);
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
